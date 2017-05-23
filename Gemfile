@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-<<<<<<< HEAD
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 
@@ -32,7 +31,7 @@ group :development, :test do
   gem 'factory_girl_rails'
   gem 'pry-rails'
 end
-=======
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
@@ -77,5 +76,3 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
 end
-
->>>>>>> c5739166fc169cf0669eeeeedace9225c353407e

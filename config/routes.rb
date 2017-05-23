@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+
+=begin
+  get 'topics/index'
+
+  get 'topics/show'
+
+  get 'topics/new'
+
+  get 'topics/edit'
+=end
+
+  resources :topics
+
   root 'welcome#index'
 
   devise_for :users
