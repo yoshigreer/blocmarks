@@ -8,9 +8,9 @@ class IncomingController < ApplicationController
     # magic here.
     puts "THIS SUCKS"
     # Find the user by using params[:sender]
-    @user = User.find_by(params[:sender])
+    @user = User.find_by(email: params[:sender])
     # Find the topic by using params[:subject]
-    @topic = Topic.find_by(params[:subject])
+    @topic = Topic.find_by(title: params[:subject])
     # Assign the url to a variable after retreiving it from params["body-plain"]
     @url = params["body-plain"]
     # Check if user is nil, if so, create and save a new user
