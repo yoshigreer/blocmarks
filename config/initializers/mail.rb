@@ -3,7 +3,7 @@ ActionMailer::Base.smtp_settings = {
   address:           'smtp.mailgun.org',
   user_name:         ENV['MAILGUN_SMTP_LOGIN'],
   password:          ENV['MAILGUN_SMTP_PASSWORD'],
-  domain:            'https://api.mailgun.net/v3/sandbox93d78863b6124913953ce2a855f32ce2.mailgun.org',
+  domain:            'https://lit-cliffs-68193.herokuapp.com/',
   authentication:    :plain,
   content_type:      'text/html'
 }

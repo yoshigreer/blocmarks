@@ -15,7 +15,7 @@ class IncomingController < ApplicationController
     @url = params["body-plain"]
     # Check if user is nil, if so, create and save a new user
     if @user.nil?
-      @user = .new(email: params[:sender], password: "password")
+      @user = User.new(email: params[:sender], password: "password")
       @user.skip_confirmation!
       @user.save!
     end
