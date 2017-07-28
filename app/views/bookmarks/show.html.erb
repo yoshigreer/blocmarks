@@ -1,0 +1,4 @@
+<h4><%= @bookmark.url %></h4>
+
+<%= link_to "edit", edit_topic_bookmark_path(@bookmark.topic, @bookmark) %>
+<%= link_to "delete", [@bookmark.topic, @bookmark], method: :delete, class: 'btn btn-danger', data: { confirm: 'Are you sure you want to delete this bookmark?' } %>

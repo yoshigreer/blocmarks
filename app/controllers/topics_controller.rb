@@ -28,14 +28,14 @@ class TopicsController < ApplicationController
   end
 
   def destroy
-  @topic = Topic.find(params[:id])
+    @topic = Topic.find(params[:id])
 
-  if @topic.destroy
-    flash[:notice] = "\"#{@topic.title}\" was deleted successfully."
-    redirect_to action: :index
-  else
-    flash.now[:alert] = "There was an error deleting the topic."
-    render :show
+    if @topic.destroy
+      flash[:notice] = "\"#{@topic.title}\" was deleted successfully."
+      redirect_to action: :index
+    else
+      flash.now[:alert] = "There was an error deleting the topic."
+      render :show
+    end
   end
-end
 end
