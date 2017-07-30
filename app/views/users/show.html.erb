@@ -1,0 +1,18 @@
+<h1><%= current_user.email %></h1>
+<div>
+  <h3>My Blocmarks</h3>
+  <% @user_bookmarks.each do |bookmark| %>
+    <p>
+      <%= link_to bookmark.url, topic_bookmark_path(bookmark.topic, bookmark) %>
+    </p>
+  <% end %>
+</div>
+
+<div>
+  <h3>Liked Blocmarks</h3>
+  <% @liked_bookmarks.each do |like| %>
+    <p>
+      <%= link_to like.bookmark.url, topic_bookmark_path(like.bookmark.topic, like.bookmark) %>
+    </p>
+  <% end %>
+</div>
