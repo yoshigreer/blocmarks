@@ -6,7 +6,6 @@ class IncomingController < ApplicationController
   def create
     # You put the message-splitting and business
     # magic here.
-    puts "THIS SUCKS"
     # Find the user by using params[:sender]
     @user = User.find_by(email: params[:sender])
     # Find the topic by using params[:subject]
