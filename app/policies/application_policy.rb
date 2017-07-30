@@ -31,8 +31,6 @@ class ApplicationPolicy
   end
 
   def destroy?
-    puts "test"
-    puts record
     user.present? && (record.user == user)
   end
 
