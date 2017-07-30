@@ -12,6 +12,7 @@ class BookmarksController < ApplicationController
     @topic = Topic.find(params[:topic_id])
     @bookmark = Bookmark.new(params.require(:bookmark).permit(:url))
     @bookmark.topic = @topic
+    @bookmark.user = User.find(params[:bookmark][:user_id])
 
     authorize @bookmark
 
